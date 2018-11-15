@@ -63,7 +63,7 @@ Nuxt.jsではそこに一定の規約が作られます
 いくつか質問をされるので、下記画像のように答えてください
 ※Project Name、description、authorについては変更可能です(念の為、動かなかった気が・・・)
 
-![create-app](./create-app.JPG?raw=true)
+![create-app](./create-app.jpg?raw=true)
 
 ## プロジェクトの説明
 
