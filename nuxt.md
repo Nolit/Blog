@@ -303,7 +303,9 @@ plugins: [
 ],
 ```
 
-また、pages/tasks/index.vueを下記のように変更します
+もう一度、/tasksへアクセスしてみてください
+開発者ツールで確認すると、モックが返ってきているのが分かると思います
+次はそのmockを表示する為に、pages/tasks/index.vueを下記のように変更します
 
 ```
 <template>
@@ -327,13 +329,16 @@ plugins: [
         created: function () {
             this.$axios.get('/tasks')
             .then(response => {
-                console.log(response.data)
                 this.tasks = response.data.tasks
             });
         }
     }
 </script>
 ```
+
+これで、SPAなToDoアプリの完成です(?)
+最後に静的ファイルへ出力をして、S3へホスティングしましょう
+
 
 ## 余談
 
