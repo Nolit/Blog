@@ -267,6 +267,14 @@ created: function () {
 ```
 
 実行してみるとimportをしなくてもVueインスタンスからaxiosを扱えることが分かります  
+雰囲気だけお伝えすると下記のようなコードがnuxtjs起動時に実行され、VueインスタンスにInjectされています(多分)  
+
+```
+// Inject axios to the context as $axios
+const axios = Axios.create(axiosOptions)
+inject('axios', axios)
+```
+
 これを行うメリットは、あらかじめセットアップしたaxiosインスタンスが、全ページで使うことが出来ることにあります  
 セットアップを行う方法はnuxt.config.jsに書くか、プラグインを使用するか、です  
 今回はプラグインを使用して、axiosにモックの設定を行います  
